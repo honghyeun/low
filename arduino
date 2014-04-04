@@ -1,0 +1,44 @@
+int i;
+
+int led[3]={6,8,10};
+void setup()
+{
+	
+	Serial.begin(9600);
+	
+	for (i=0; i<=2; i++)
+	{
+		pinMode(led[i], OUTPUT);
+	}
+
+}
+void loop()
+{
+ 
+   digitalWrite(led[0], HIGH);
+   digitalWrite(led[1], HIGH);
+   digitalWrite(led[2], HIGH);
+   delay(1000);
+   
+   digitalWrite(led[0], LOW);
+   digitalWrite(led[1], LOW);
+   digitalWrite(led[2], LOW);
+   delay(1000);
+   
+  
+   
+    
+
+
+
+        
+	for(i=0; i<=2; i++)
+	{
+		digitalWrite(led[i], HIGH);
+		delay(1000);
+	
+		digitalWrite(led[i], LOW);
+		delay(1000);
+	}	
+ 
+}
