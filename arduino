@@ -15,30 +15,46 @@ void setup()
 void loop()
 {
  
+for(i=0; i<4; i++)
+{
+
+if(i==0)
+
+{
    digitalWrite(led[0], HIGH);
    digitalWrite(led[1], HIGH);
    digitalWrite(led[2], HIGH);
    delay(1000);
-   
-   digitalWrite(led[0], LOW);
+   Serial.println("led0,1,2 on");
+
+}
+
+else if(i==1)
+{
+
+   digitalWrite(led[0], HIGH);
    digitalWrite(led[1], LOW);
    digitalWrite(led[2], LOW);
    delay(1000);
-   
-  
-   
-    
+   Serial.println("led0 on");
+}
 
+else if(i==2)
+{
+   digitalWrite(led[0], LOW);
+   digitalWrite(led[1], HIGH);
+   digitalWrite(led[2], LOW);
+   delay(1000);
+   Serial.println("led1 on");
+}
 
+else 
+{
+   digitalWrite(led[0], LOW);
+   digitalWrite(led[1], LOW);
+   digitalWrite(led[2], HIGH);
+   delay(1000);
+   Serial.println("led2 on");
+}
 
-        
-	for(i=0; i<=2; i++)
-	{
-		digitalWrite(led[i], HIGH);
-		delay(1000);
-	
-		digitalWrite(led[i], LOW);
-		delay(1000);
-	}	
- 
 }
